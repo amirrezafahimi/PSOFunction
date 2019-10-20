@@ -27,10 +27,10 @@ class Particle:
 
 class Space:
 
-    def __init__(self, target, target_error, n_particles):
+    def __init__(self, target, target_error_function, n_particles_function):
         self.target = target
-        self.target_error = target_error
-        self.n_particles = n_particles
+        self.target_error = target_error_function
+        self.n_particles = n_particles_function
         self.particles = []
         self.gbest_value = float('inf')
         self.gbest_position = np.array([random.random() * 50, random.random() * 50])
